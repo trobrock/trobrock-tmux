@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-free="$(df -h | grep '/$' | awk '{ print $5 }' | tr -d ' ' | tr -d '%')"
+free="$(df -h | awk '/\/$/{ gsub(/%/, "", $5); print $5 }')"
 
 color="default"
 if [ "$free" -ge 90 ]; then
