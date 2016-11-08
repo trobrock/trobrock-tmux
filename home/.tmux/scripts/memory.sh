@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 percent=$(vm_stat | awk -f $HOME/.tmux/scripts/memory.awk)
 

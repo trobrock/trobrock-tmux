@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 free="$(df -h | awk '/\/$/{ gsub(/%/, "", $5); print $5 }')"
 
