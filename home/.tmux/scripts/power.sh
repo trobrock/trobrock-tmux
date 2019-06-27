@@ -49,9 +49,11 @@ else
   output="$output#[fg=yellow]"
 fi
 
+output="$output$power"
+
 if [ $(battery_status) = "charging" ]
 then
-  output="#[default]⟲ $output"
+  output="#[fg=green]⟲ $output"
 fi
 
-echo "$output$power"
+echo $output

@@ -3,9 +3,9 @@
 free="$(df -h | awk '/\/$/{ gsub(/%/, "", $5); print $5 }')"
 
 color="default"
-if [ "$free" -ge 90 ]; then
+if [ "$free" -ge 95 ]; then
   color="red"
-elif [ "$free" -ge 75 ]; then
+elif [ "$free" -ge 90 ]; then
   color="yellow"
 fi
 
