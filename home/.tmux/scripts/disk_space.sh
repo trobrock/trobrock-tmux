@@ -1,6 +1,6 @@
 #!/bin/bash
 
-free="$(df -h | awk '/\/$/{ gsub(/%/, "", $5); print $5 }')"
+free="$(df -h | awk '/\/System\/Volumes\/Data$/{ gsub(/%/, "", $5); print $5 }')"
 
 color="default"
 if [ "$free" -ge 95 ]; then
